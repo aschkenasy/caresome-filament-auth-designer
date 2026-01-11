@@ -393,6 +393,7 @@ AuthDesignerPlugin::make()
 >
 > -   `PanelsRenderHook::AUTH_LOGIN_FORM_BEFORE`
 > -   `PanelsRenderHook::AUTH_LOGIN_FORM_AFTER`
+> -   `PanelsRenderHook::Footer`
 
 | Hook           | Description                     | Available In           |
 | -------------- | ------------------------------- | ---------------------- |
