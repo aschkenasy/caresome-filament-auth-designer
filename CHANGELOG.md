@@ -4,9 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## v2.0.4 - 2026-01-12
 
-### Added
+### Fixed
 
 -   Fixing tab issue in login page
+
+### Added
+
 -   Adding missing footer render hook to auth layout
 
 ## v2.0.3 - 2025-12-06
