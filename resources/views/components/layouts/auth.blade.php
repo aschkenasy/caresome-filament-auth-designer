@@ -1,5 +1,7 @@
 @php
     use Caresome\FilamentAuthDesigner\View\AuthDesignerRenderHook;
+    use Filament\Support\Facades\FilamentView;
+    use Filament\View\PanelsRenderHook;
 
     $config = $authDesignerConfig;
     $hasMedia = $config->hasMedia();
@@ -8,12 +10,6 @@
 @endphp
 
 <x-filament-panels::layout.base :livewire="$livewire">
-    @if ($config->showThemeSwitcher)
-        @include('filament-auth-designer::components.partials.theme-toggle', [
-            'position' => $config->themePosition,
-        ])
-    @endif
-
     @php
         $layoutStyles = [];
 
@@ -60,4 +56,12 @@
             @endif
         </div>
     </div>
+
+    {{ FilamentView::renderHook(PanelsRenderHook::FOOTER) }}
+
+    @if ($config->showThemeSwitcher)
+        @include('filament-auth-designer::components.partials.theme-toggle', [
+            'position' => $config->themePosition,
+        ])
+    @endif
 </x-filament-panels::layout.base>

@@ -102,7 +102,7 @@ trait HasPages
     {
         $config = new AuthPageConfig;
 
-        if ($configurator instanceof \Closure) {
+        if ($configurator instanceof Closure) {
             $configurator($config);
         }
 
